@@ -1,0 +1,37 @@
+/* ============================================================
+   Зелёный Дом — дизайн-токены
+   Единый источник значений: цвета, тени, геометрия, переходы.
+   ============================================================ */
+
+:root {
+  /* Цвета бренда */
+  --green: #2f5d3a;
+  --green-dark: #24492d;
+  --green-light: #7ab87a;
+  --green-soft: #e7f0e5;
+  --green-pale: #dfe9dd;
+  --green-tint: #d8ead4;
+  --cream: #f8f5ef;
+  --white: #ffffff;
+  --text: #2a2a2a;
+  --text-soft: #66635e;
+  --terracotta: #c67b5c;
+  --terracotta-dark: #a96146;
+  --terracotta-soft: #b86d4d;
+  --line: #e6e1d8;
+
+  /* Фоны секций и служебных элементов */
+  --bg-alt: #fbf9f5;
+  --bg-stat: #f6f2ea;
+  --bg-footer: #23472d;
+  --bg-toast: #223a27;
+
+  /* Тени */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 14px 34px rgba(0, 0, 0, 0.10);
+
+  /* Геометрия и движение */
+  --radius: 16px;
+  --container: 1200px;
+  --transition: 0.25s ease;
+}

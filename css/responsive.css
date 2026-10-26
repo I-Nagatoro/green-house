@@ -1,0 +1,164 @@
+/* ============================================================
+   Зелёный Дом — адаптивность
+   Брейкпоинты: 640px, 1024px, 1180px, prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- 640px ---------- */
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: 28px;
+  }
+
+  .section {
+    padding: 84px 0;
+  }
+
+  .hero {
+    padding: 86px 0 96px;
+  }
+
+  .newsletter {
+    padding-bottom: 100px;
+  }
+
+  .about-copy,
+  .about-stats {
+    padding: 34px;
+  }
+
+  .newsletter-card {
+    padding: 42px 34px;
+  }
+
+  .newsletter-form {
+    grid-template-columns: 1fr auto;
+  }
+
+  .newsletter-input {
+    min-width: 0;
+  }
+
+  .newsletter-submit {
+    min-width: 170px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ---------- 1024px ---------- */
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: 32px;
+  }
+
+  .header-inner {
+    min-height: 82px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .main-nav a {
+    min-height: 44px;
+  }
+
+  .header-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-actions {
+    justify-content: flex-end;
+  }
+
+  .cart-button {
+    padding-inline: 14px;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
+    gap: 70px;
+  }
+
+  .hero {
+    padding: 110px 0 118px;
+  }
+
+  .hero-visual {
+    min-height: 530px;
+  }
+
+  .plant-illustration {
+    width: 290px;
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.9fr);
+    gap: 24px;
+  }
+
+  .newsletter-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(330px, 0.8fr);
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 0.9fr;
+    gap: 40px;
+  }
+}
+
+/* ---------- 1180px ---------- */
+
+@media (min-width: 1180px) {
+  .hero-copy {
+    padding-left: 8px;
+  }
+
+  .hero-visual {
+    min-height: 570px;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

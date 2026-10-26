@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Зелёный Дом — комнатные растения для уютного дома. Живые растения, быстрая доставка и бесплатная консультация.">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>Зелёный Дом — комнатные растения</title>
+
+  <!-- SEO: canonical, соцсети, favicon -->
+  <link rel="canonical" href="https://zelenydom.ru/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Зелёный Дом">
+  <meta property="og:title" content="Зелёный Дом — комнатные растения">
+  <meta property="og:description" content="Живые растения, быстрая доставка и бесплатная консультация.">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://zelenydom.ru/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Структурированные данные -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Зелёный Дом",
+    "description": "Комнатные растения для уютного дома: живые растения, быстрая доставка и бесплатная консультация.",
+    "url": "https://zelenydom.ru/",
+    "telephone": "+79991234567",
+    "email": "hello@zelenydom.ru",
+    "openingHours": "Mo-Su 10:00-21:00",
+    "priceRange": "₽"
+  }
+  </script>
+
+  <!-- Стили: токены → база → компоненты → раскладка → адаптивность -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Доступность: ссылка «к содержанию» для клавиатуры -->
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+
+  <!-- SVG-спрайт: логотип определён один раз, используется через <use> -->
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none">
+      <path d="M19.5 4.5C12.2 4.8 7.7 7.4 6 11.8c-1 2.6-.5 5.2 1.5 7.7 2.5-2 4.1-4.8 4.7-8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+      <path d="M6.6 19.5c2.9-3.7 6.2-6.2 9.9-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="#top" aria-label="Зелёный Дом — на главную">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-leaf"></use>
+            </svg>
+          </span>
+          <span>Зелёный Дом</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+          <ul>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#benefits">Преимущества</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="cart-button" id="cartButton" type="button"
+                  aria-label="Открыть корзину" aria-expanded="false" aria-controls="cartDrawer">
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 5h2l1.7 9.1a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 1.9-1.4L21 8H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="19" r="1.2" fill="currentColor"/>
+              <circle cx="18" cy="19" r="1.2" fill="currentColor"/>
+            </svg>
+            <span class="cart-label">Корзина</span>
+            <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+          </button>
+
+          <button class="menu-toggle" id="menuToggle" type="button"
+                  aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-copy">
+            <div class="eyebrow">Живые растения для вашего дома</div>
+
+            <h1 id="hero-title">
+              Растения, которые
+              <span class="hero-title-accent">делают дом живым</span>
+            </h1>
+
+            <p class="hero-description">
+              Подбираем красивые и здоровые растения для квартиры, офиса и подарков.
+              Доставим бережно, подскажем по уходу и поможем найти именно ваше зелёное настроение.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#catalog">
+                Смотреть каталог
+                <span aria-hidden="true">→</span>
+              </a>
+
+              <a class="btn btn-secondary" href="#about">
+                Как выбрать растение
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual" role="img" aria-label="Иллюстрация комнатного растения">
+            <div class="plant-illustration" aria-hidden="true">
+              <div class="plant-stem"></div>
+              <div class="leaf leaf-1"></div>
+              <div class="leaf leaf-2"></div>
+              <div class="leaf leaf-3"></div>
+              <div class="leaf leaf-4"></div>
+              <div class="plant-pot"></div>
+            </div>
+
+            <div class="hero-badge">
+              <span aria-hidden="true">✦</span>
+              Свежие растения каждую неделю
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Почему выбирают нас</div>
+          <h2 id="benefits-title">Заботимся о растениях — и о вас</h2>
+          <p class="section-description">
+            От подбора до доставки всё делаем так, будто выбираем растение для собственного дома.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">🌿</div>
+            <h3>Живые растения с гарантией</h3>
+            <p>
+              Перед отправкой проверяем каждое растение и берём на себя гарантию приживаемости.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">🛵</div>
+            <h3>Доставка по городу за 2 часа</h3>
+            <p>
+              Привезём растение аккуратно и без долгого ожидания — в удобное для вас время.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">💬</div>
+            <h3>Бесплатная консультация</h3>
+            <p>
+              Расскажем, где поставить растение, как поливать и что делать, если оно загрустило.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">♻️</div>
+            <h3>Эко-упаковка</h3>
+            <p>
+              Используем минимум пластика и надёжно защищаем растения в дороге.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOG (карточки рендерятся из js/data/products.js) -->
+    <section class="section catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Каталог</div>
+          <h2 id="catalog-title">Немного джунглей для начала</h2>
+          <p class="section-description">
+            Собрали любимые растения, которые легко впишутся и в светлую квартиру, и в уютный рабочий уголок.
+          </p>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <article class="about-copy">
+            <div class="eyebrow">О магазине</div>
+            <h2 id="about-title">Мы верим, что уют начинается с зелени</h2>
+            <p>
+              «Зелёный Дом» появился из простой любви к растениям и желания сделать их частью
+              повседневной жизни. Мы выбираем питомцев не только по красоте, но и по тому,
+              насколько комфортно им будет жить у вас дома.
+            </p>
+
+            <ul class="about-list">
+              <li>Подбираем растения под освещение и ваш ритм жизни.</li>
+              <li>Помогаем подобрать кашпо и аксессуары в одном стиле.</li>
+              <li>После покупки остаёмся на связи и отвечаем на вопросы по уходу.</li>
+              <li>Регулярно обновляем коллекцию свежими и необычными видами.</li>
+            </ul>
+          </article>
+
+          <aside class="about-stats" aria-label="Зелёный Дом в цифрах">
+            <div class="stats-grid">
+              <div class="stat">
+                <strong>7+</strong>
+                <span>лет выращиваем и продаём растения</span>
+              </div>
+
+              <div class="stat">
+                <strong>12 000+</strong>
+                <span>довольных клиентов</span>
+              </div>
+
+              <div class="stat">
+                <strong>80+</strong>
+                <span>видов растений в коллекции</span>
+              </div>
+
+              <div class="stat">
+                <strong>2 часа</strong>
+                <span>среднее время доставки по городу</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Отзывы</div>
+          <h2 id="reviews-title">Растения приезжают — улыбки остаются</h2>
+          <p class="section-description">
+            Нам особенно приятно видеть, как новые зелёные друзья становятся частью дома.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">АК</div>
+              <div>
+                <p class="review-author"><strong>Анна К.</strong></p>
+                <p class="review-role">Покупатель</p>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Оценка: 5 из 5 звёзд">★★★★★</div>
+            <p class="review-text">
+              «Заказывала монстеру в подарок. Привезли очень аккуратно, растение красивое и
+              даже лучше, чем на фото. Отдельное спасибо за советы по уходу!»
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">МР</div>
+              <div>
+                <p class="review-author"><strong>Максим Р.</strong></p>
+                <p class="review-role">Покупатель</p>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Оценка: 5 из 5 звёзд">★★★★★</div>
+            <p class="review-text">
+              «Наконец-то нашёл растение, которое переживает мой график. Замиокулькас уже
+              месяц стоит в офисе и выглядит отлично. Буду брать ещё.»
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-header">
+              <div class="avatar" aria-hidden="true">ЕВ</div>
+              <div>
+                <p class="review-author"><strong>Елена В.</strong></p>
+                <p class="review-role">Покупатель</p>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Оценка: 5 из 5 звёзд">★★★★★</div>
+            <p class="review-text">
+              «Очень уютный магазин и внимательное отношение. Помогли подобрать сразу три
+              растения для разных комнат. Все прекрасно прижились.»
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / NEWSLETTER -->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-grid">
+
+            <div>
+              <div class="eyebrow eyebrow--on-dark">Для любителей зелени</div>
+              <h2 id="newsletter-title">Получите скидку 10% на первое растение</h2>
+              <p>
+                Оставьте email — пришлём промокод, полезные советы по уходу и иногда
+                расскажем о новых растениях, которые только приехали к нам.
+              </p>
+            </div>
+
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <label class="visually-hidden" for="email">
+                Ваш email
+              </label>
+
+              <input
+                class="newsletter-input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Ваш email"
+                autocomplete="email"
+                required
+                aria-describedby="formNote"
+              >
+
+              <button class="btn newsletter-submit" type="submit">
+                Получить скидку
+              </button>
+
+              <div class="form-note" id="formNote" aria-live="polite">
+                Без спама. Только растения и хорошие новости.
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="#top" aria-label="Зелёный Дом — на главную">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-leaf"></use>
+              </svg>
+            </span>
+            <span>Зелёный Дом</span>
+          </a>
+
+          <p class="footer-description">
+            Комнатные растения, которые помогают создавать дома,
+            в которые хочется возвращаться.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">Магазин</div>
+          <ul class="footer-links">
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#benefits">Преимущества</a></li>
+            <li><a href="#about">О нас</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Контакты</div>
+          <ul class="footer-contacts">
+            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+            <li><a href="mailto:hello@zelenydom.ru">hello@zelenydom.ru</a></li>
+            <li>Ежедневно: 10:00–21:00</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Мы в соцсетях</div>
+
+          <div class="socials">
+            <a class="social-link" href="https://t.me/zelenydom" target="_blank" rel="noopener noreferrer" aria-label="Telegram — открыть в новой вкладке">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 4L17.8 20c-.2 1.1-.8 1.4-1.6.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8L17.3 7c.3-.3-.1-.5-.5-.2L7.9 12.7 3.2 11.2c-1-.3-1-.9.2-1.3L20.1 3.4C20.9 3.1 21.5 3.6 21 4Z" fill="currentColor"/>
+              </svg>
+            </a>
+
+            <a class="social-link" href="https://vk.com/zelenydom" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте — открыть в новой вкладке">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4.7 5.2h2.8c.1 4.5 2.1 6.4 3.7 6.8V5.2h2.6v3.9c1.6-.2 3.3-1.9 3.8-3.9h2.6c-.4 2.4-2.2 4.1-3.2 4.8 1 .5 3 2 3.7 4.8h-2.8c-.5-1.8-1.9-3.2-4.1-3.3v3.3h-.3c-5.7 0-8.9-3.9-9-9.6Z" fill="currentColor"/>
+              </svg>
+            </a>
+
+            <a class="social-link" href="https://instagram.com/zelenydom" target="_blank" rel="noopener noreferrer" aria-label="Instagram — открыть в новой вкладке">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> «Зелёный Дом»</span>
+        <span>Растения — это уют 🌿</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title" id="cartTitle">Корзина</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Закрыть корзину">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+    <p class="cart-empty" id="cartEmpty" hidden>В корзине пока пусто — выберите растение в каталоге.</p>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span id="cartTotal">0 ₽</span>
+      </div>
+      <button class="cart-clear" id="cartClear" type="button">Очистить корзину</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <strong id="toastMessage">Растение добавлено в корзину</strong>
+  </div>
+
+  <!-- Скрипты: данные → корзина → интерфейс → инициализация -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
